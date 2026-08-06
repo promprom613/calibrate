@@ -3,6 +3,7 @@ package com.prom3x209.calibrate
 import android.app.Activity
 import android.os.Build
 import android.os.Bundle
+import android.view.RoundedCorner
 import android.view.WindowInsets
 import android.widget.ScrollView
 import android.widget.TextView
@@ -39,10 +40,10 @@ class MainActivity : Activity() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             val positions = mapOf(
-                "TOP_LEFT" to WindowInsets.RoundedCorner.POSITION_TOP_LEFT,
-                "TOP_RIGHT" to WindowInsets.RoundedCorner.POSITION_TOP_RIGHT,
-                "BOTTOM_LEFT" to WindowInsets.RoundedCorner.POSITION_BOTTOM_LEFT,
-                "BOTTOM_RIGHT" to WindowInsets.RoundedCorner.POSITION_BOTTOM_RIGHT
+                "TOP_LEFT" to RoundedCorner.POSITION_TOP_LEFT,
+                "TOP_RIGHT" to RoundedCorner.POSITION_TOP_RIGHT,
+                "BOTTOM_LEFT" to RoundedCorner.POSITION_BOTTOM_LEFT,
+                "BOTTOM_RIGHT" to RoundedCorner.POSITION_BOTTOM_RIGHT
             )
             for ((name, pos) in positions) {
                 val rc = insets.getRoundedCorner(pos)
